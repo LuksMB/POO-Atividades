@@ -2,19 +2,23 @@
 #include <iostream>
 #include <vector>
 
-bool existir(int number, std::vector<int> arr)
+int procurar_valor_pos(int number, std::vector<int> vet, int pos_inicial)
 {
-    for (int x = 0; x < arr.size(); x++){
-        if (arr[x] == number)
-            return true;
+    for (int x = pos_inicial; x < vet.size(); x++){
+        if (vet[x] == number){
+            return x;
+        }
     }
-    return false;
+    return -1;
 }
 
-int main(){ 
-    int n, tamanho;
+int main()
+{
+    int n, tamanho, pos_x;
     std::cout << "Digite o numero a ser procurado: " << "\n";
     std::cin >> n;
+    std::cout << "Digite a posição inicial para a busca: " << "\n";
+    std::cin >> pos_x;
     std::cout << "Digite o tamanho do vetor: " << "\n";
     std::cin >> tamanho;
     std::vector<int> fila {};
@@ -25,8 +29,6 @@ int main(){
         std::cin >> a; 
         fila.push_back(a);  
     }
-    
-    bool boo = existir(n, fila);
-    std::cout << boo << "\n";
-    return 0;
+
+    std::cout << procurar_valor_pos(n, fila, pos_x) << "\n";
 }

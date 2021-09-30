@@ -2,16 +2,19 @@
 #include <iostream>
 #include <vector>
 
-bool existir(int number, std::vector<int> arr)
+int contar(int number, std::vector<int> vet)
 {
-    for (int x = 0; x < arr.size(); x++){
-        if (arr[x] == number)
-            return true;
+    int counter = 0;
+    for (int x = 0; x < vet.size(); x++){
+        if (vet[x] == number){
+            counter++;
+        }
     }
-    return false;
+    return counter;
 }
 
-int main(){ 
+int main()
+{
     int n, tamanho;
     std::cout << "Digite o numero a ser procurado: " << "\n";
     std::cin >> n;
@@ -25,8 +28,6 @@ int main(){
         std::cin >> a; 
         fila.push_back(a);  
     }
-    
-    bool boo = existir(n, fila);
-    std::cout << boo << "\n";
-    return 0;
+
+    std::cout << contar(n, fila) << "\n";
 }
