@@ -22,7 +22,7 @@ int main(){
     for(int x = 0; x < tamanho; x++){
         int a;
         std::cout << "Digite a adicao ao vetor: " << "\n";
-        std::cin >> a; 
+        std::cin >> a;
         fila.push_back(a);  
     }
     
