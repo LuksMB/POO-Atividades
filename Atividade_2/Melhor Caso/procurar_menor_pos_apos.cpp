@@ -6,7 +6,7 @@ int procurar_menor_pos(std::vector<int> vet, int ponto_inicial)
 {
     int menor = 1000;
     int pos = -1;
-    for(int x = ponto_inicial; x < vet.size(); x++){
+    for(int x = ponto_inicial + 1; x < vet.size(); x++){
         if (vet[x] < menor){
             menor = vet[x];
             pos = x;

@@ -4,7 +4,7 @@
 
 int procurar_valor_pos(int number, std::vector<int> vet, int pos_inicial)
 {
-    for (int x = pos_inicial; x < vet.size(); x++){
+    for (int x = pos_inicial + 1; x < vet.size(); x++){
         if (vet[x] == number){
             return x;
         }
