@@ -17,6 +17,10 @@ std::string mulheres_homens_stress(std::vector<int> vet)
             conth++;
         }
     }
+    if (contm == 0)
+        contm++;
+    if (conth == 0)
+        conth++;
     mediah = mediah / conth;
     mediam = mediam / contm;
 
